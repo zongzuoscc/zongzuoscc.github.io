@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>大数据存储与管理 | 未竟</title><meta name="author" content="宗佐"><meta name="copyright" content="宗佐"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="大数据存储与管理理论课题型分布一、论述题（我不知道能考什么）   二、分布式数据库设计及查询优化（如何分片，查询优化树） 三、分布式存取优化（半连接，传输代价） 四、Hbase或索引结构设计 五、分布式事务管理其中第二和第三部分占50%的分值，是复习重点，可以把期中测试题反复理解  知识点分布第一章：大数据的由来（为什么会产生大数据存储系统？）大数据需要怎样的存储系统NewSQL数据库的特点 第二">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>大数据存储与管理 | 未竟</title><meta name="author" content="宗佐"><meta name="copyright" content="宗佐"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="大数据存储与管理理论课题型分布一、论述题（我不知道能考什么）   二、分布式数据库设计及查询优化（如何分片，查询优化树） 三、分布式存取优化（半连接，传输代价） 四、Hbase或索引结构设计 五、分布式事务管理其中第二和第三部分占50%的分值，是复习重点，可以把期中测试题反复理解  知识点分布第一章：大数据的由来（为什么会产生大数据存储系统？）   大数据存储系统的产生主要是为了突破传统关系型数据">
 <meta property="og:type" content="article">
 <meta property="og:title" content="大数据存储与管理">
 <meta property="og:url" content="https://zongzuoscc.github.io/2025/12/26/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E4%B8%8E%E7%AE%A1%E7%90%86%E5%A4%8D%E4%B9%A0/index.html">
 <meta property="og:site_name" content="未竟">
-<meta property="og:description" content="大数据存储与管理理论课题型分布一、论述题（我不知道能考什么）   二、分布式数据库设计及查询优化（如何分片，查询优化树） 三、分布式存取优化（半连接，传输代价） 四、Hbase或索引结构设计 五、分布式事务管理其中第二和第三部分占50%的分值，是复习重点，可以把期中测试题反复理解  知识点分布第一章：大数据的由来（为什么会产生大数据存储系统？）大数据需要怎样的存储系统NewSQL数据库的特点 第二">
+<meta property="og:description" content="大数据存储与管理理论课题型分布一、论述题（我不知道能考什么）   二、分布式数据库设计及查询优化（如何分片，查询优化树） 三、分布式存取优化（半连接，传输代价） 四、Hbase或索引结构设计 五、分布式事务管理其中第二和第三部分占50%的分值，是复习重点，可以把期中测试题反复理解  知识点分布第一章：大数据的由来（为什么会产生大数据存储系统？）   大数据存储系统的产生主要是为了突破传统关系型数据">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zongzuoscc.github.io/img/%E5%B0%8F%E7%86%8A%E7%BB%B4%E5%B0%BC.jpg">
 <meta property="article:published_time" content="2025-12-25T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-12-26T12:52:33.888Z">
+<meta property="article:modified_time" content="2025-12-29T08:45:00.297Z">
 <meta property="article:author" content="宗佐">
 <meta property="article:tag" content="Java, Spring Boot, MySQL, CUMT">
 <meta name="twitter:card" content="summary">
@@ -18,7 +18,7 @@
   "url": "https://zongzuoscc.github.io/2025/12/26/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E4%B8%8E%E7%AE%A1%E7%90%86%E5%A4%8D%E4%B9%A0/",
   "image": "https://zongzuoscc.github.io/img/%E5%B0%8F%E7%86%8A%E7%BB%B4%E5%B0%BC.jpg",
   "datePublished": "2025-12-25T16:00:00.000Z",
-  "dateModified": "2025-12-26T12:52:33.888Z",
+  "dateModified": "2025-12-29T08:45:00.297Z",
   "author": [
     {
       "@type": "Person",
@@ -159,19 +159,92 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/img/bg.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/%E5%B0%8F%E7%86%8A%E7%BB%B4%E5%B0%BC.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">未竟</span></a><a class="nav-page-title" href="/"><span class="site-name">大数据存储与管理</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">大数据存储与管理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-12-25T16:00:00.000Z" title="发表于 2025-12-26 00:00:00">2025-12-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-12-26T12:52:33.888Z" title="更新于 2025-12-26 20:52:33">2025-12-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="大数据存储与管理理论课"><a href="#大数据存储与管理理论课" class="headerlink" title="大数据存储与管理理论课"></a>大数据存储与管理理论课</h1><h2 id="题型分布"><a href="#题型分布" class="headerlink" title="题型分布"></a>题型分布</h2><h3 id="一、论述题"><a href="#一、论述题" class="headerlink" title="一、论述题"></a>一、论述题</h3><p>（我不知道能考什么）  </p>
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/img/bg.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/%E5%B0%8F%E7%86%8A%E7%BB%B4%E5%B0%BC.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">未竟</span></a><a class="nav-page-title" href="/"><span class="site-name">大数据存储与管理</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">大数据存储与管理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-12-25T16:00:00.000Z" title="发表于 2025-12-26 00:00:00">2025-12-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-12-29T08:45:00.297Z" title="更新于 2025-12-29 16:45:00">2025-12-29</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="大数据存储与管理理论课"><a href="#大数据存储与管理理论课" class="headerlink" title="大数据存储与管理理论课"></a>大数据存储与管理理论课</h1><h2 id="题型分布"><a href="#题型分布" class="headerlink" title="题型分布"></a>题型分布</h2><h3 id="一、论述题"><a href="#一、论述题" class="headerlink" title="一、论述题"></a>一、论述题</h3><p>（我不知道能考什么）  </p>
 <h3 id="二、分布式数据库设计及查询优化（如何分片，查询优化树）"><a href="#二、分布式数据库设计及查询优化（如何分片，查询优化树）" class="headerlink" title="二、分布式数据库设计及查询优化（如何分片，查询优化树）"></a>二、分布式数据库设计及查询优化（如何分片，查询优化树）</h3><p><img src="https://jsd.cdn.zzko.cn/gh/zongzuoscc/blog-images@main/img/5073168715bfd48059eb854e003b63e3.jpg" alt="5073168715bfd48059eb854e003b63e3"></p>
 <h3 id="三、分布式存取优化（半连接，传输代价）"><a href="#三、分布式存取优化（半连接，传输代价）" class="headerlink" title="三、分布式存取优化（半连接，传输代价）"></a>三、分布式存取优化（半连接，传输代价）</h3><p><img src="https://jsd.cdn.zzko.cn/gh/zongzuoscc/blog-images@main/img/f5da3c2fb030f7d227cf7c360b24559c.jpg" alt="f5da3c2fb030f7d227cf7c360b24559c"></p>
 <h3 id="四、Hbase或索引结构设计"><a href="#四、Hbase或索引结构设计" class="headerlink" title="四、Hbase或索引结构设计"></a>四、Hbase或索引结构设计</h3><p><img src="https://jsd.cdn.zzko.cn/gh/zongzuoscc/blog-images@main/img/f48951b6a8514659fe59ce1b889d757d.jpg" alt="f48951b6a8514659fe59ce1b889d757d"></p>
 <h3 id="五、分布式事务管理"><a href="#五、分布式事务管理" class="headerlink" title="五、分布式事务管理"></a>五、分布式事务管理</h3><p>其中第二和第三部分占50%的分值，是复习重点，可以把期中测试题反复理解</p>
 <hr>
-<h2 id="知识点分布"><a href="#知识点分布" class="headerlink" title="知识点分布"></a>知识点分布</h2><h3 id="第一章："><a href="#第一章：" class="headerlink" title="第一章："></a>第一章：</h3><p>大数据的由来（为什么会产生大数据存储系统？）<br>大数据需要怎样的存储系统<br>NewSQL数据库的特点</p>
-<h3 id="第二章："><a href="#第二章：" class="headerlink" title="第二章："></a>第二章：</h3><p>客户&#x2F;服务器的体系结构（不同体系结构中AP和DP的功能的变化）<br>分库分表架构、存算分离架构的概念及优缺点<br>分布式数据库系统的模式结构<br>分布式数据库系统的数据透明性（定义，举例）<br>多数据库集成的方法，区别与联系</p>
-<h3 id="第三章："><a href="#第三章：" class="headerlink" title="第三章："></a>第三章：</h3><p>分布式数据库设计的分片原则、定义、表示方法<br>证明分片原则的正确性<br>分布式数据库的查询优化策略及片段查询优化方法<br>分布式查询的存取优化方法、特征参数的计算（选择运算、投影运算、自然连接运算、半连接运算）</p>
-<h3 id="第四章："><a href="#第四章：" class="headerlink" title="第四章："></a>第四章：</h3><p>HBase解决了HDFS的哪些问题?具有哪些特点?<br>HBase数据库中region的含义及其特性。同一个表不同行的数据可以存放在不同的服务器，同一个表相同行的数据必须存放在相同的服务器。这句话如何理解?<br>HBase增删改查的真正操作内容是什么?<br>HBase的读写流程<br>HBase数据库设计rowkey和列族的原则和方法<br>HDFS的优势:(大文件存储、多副本、自动分块)<br>如果仅用HDFs进行数据管理，存在一些问题:<br>(1)HDFS不支持对数据的随机改写<br>(2)HDFS没有数据表的概念<br>(3)HDFS无法针对行数统计、过滤扫描等常见数据查询功能实现快捷操作，一般需要通过Mapreduce实现。<br>HBase底层采用HDFS存储，但是文件结构和元数据等自身维护。具体来说具有以下特点:<br>(1)采用面向列加键值对的存储模式<br>(2)可实现便捷的向扩展<br>(3)可以实现自动的数据分片<br>(4)实现较为严格的读写一致性和自动故障转移  </p>
+<h2 id="知识点分布"><a href="#知识点分布" class="headerlink" title="知识点分布"></a>知识点分布</h2><h3 id="第一章："><a href="#第一章：" class="headerlink" title="第一章："></a>第一章：</h3><p>大数据的由来（为什么会产生大数据存储系统？）  </p>
+<p>大数据存储系统的产生主要是为了突破传统关系型数据库（RDBMS）的局限性，以适应新时代数据的“3V”特性（量大、多样、快速）。  </p>
+<p>打破“One Size Fits All”的僵局：传统的抽象认为关系型数据库可以解决所有问题，但随着互联网的发展，这种“一刀切”的模式阻碍了技术发展，必须根据不同的业务场景选择不同的存储方案 。  </p>
+<p>纵向扩展（Vertical Scaling）的瓶颈：</p>
+<p>摩尔定律失效：单纯依靠增加单机硬件性能（如“蜘蛛侠”式的个人能力）已无法满足海量数据的处理需求 。<br>成本与物理限制：单机性能提升存在物理极限，且成本极其昂贵。</p>
+<p>横向扩展（Horizontal Scaling）的需求：</p>
+<p>需要像“蚂蚁搬家”一样，通过大量普通节点的协作来支撑更大的请求量 。<br>传统数据库在面对海量数据时，通过“分库分表”等手段虽然能一定程度上解决问题，但会带来数据同步延迟、跨库事务复杂、扩容困难等痛点 。</p>
+<p>数据特性的变化：  </p>
+<p>数据量爆炸式增长（Volume）。<br>数据类型繁多（Variety），包含大量非结构化数据（如视频、日志），结构化数据仅占10%。<br>处理速度要求快（Velocity）。  </p>
+<p>大数据需要怎样的存储系统<br>统一资源管理：能够对集群内的计算机及存储资源进行统一的调度和监控。<br>分散存储与统一管理：数据不是集中在一点，而是分散存储在集群内，但逻辑上进行统一管理。<br>协同工作与负载均衡：集群内的计算机分工协作，共同完成任务，避免单点过载 。<br>高可用与容错性（分区容错）：当集群中某一台计算机发生故障时，系统仍能保证功能有效，且数据不会丢失。<br>高伸缩性（Scalability）：可以用简单的方式部署、扩展集群，以及替换故障节点。  </p>
+<p>NewSQL数据库的特点  </p>
+<p>NewSQL 数据库的出现是为了解决 NoSQL 数据库在商业应用中的不足，它结合了传统关系型数据库的强约束和分布式系统的扩展性。</p>
+<p>产生的背景（对 NoSQL 的反思）：图灵奖得主 Stonebraker 指出 NoSQL 存在三大“罪状”，这也是 NewSQL 致力于解决的问题 ：<br>缺乏 ACID 支持（No ACID Equals No Interest）：企业级应用需要事务一致性。<br>低级查询语言（A Low-Level Query Language is Death）：SQL 依然是最高效的标准语言。<br>缺乏标准（NoSQL Means No Standards）：各家接口不统一增加了使用成本。<br>核心特点：<br>强约束（Strong Constraint）：与 NoSQL 的“弱约束”相对，NewSQL 重新支持了 ACID 事务特性。<br>SQL 支持：保留了标准 SQL 查询语言的便利性。<br>可扩展性：依然保持了分布式架构的横向扩展能力（这是区别于传统 RDBMS 的关键）。  </p>
+<h3 id="第二章："><a href="#第二章：" class="headerlink" title="第二章："></a>第二章：</h3><p>客户&#x2F;服务器的体系结构（不同体系结构中AP和DP的功能的变化）  </p>
+<p>应用处理器(AP) 用于完成数据处理的软件，如：处理访问多个场地的请求，查询全局字典中分布信息等。 </p>
+<p>数据处理器(DP) 负责进行数据管理的软件，类似于一个集中式数据库管理系统（DBMS）。    </p>
+<br/>
+分库分表架构、存算分离架构的概念及优缺点  
+
+<p>无共享存储型（Shared-Nothing）&#x2F; 分库分表架构：<br>概念：各个节点完全对等，互不共享存储。每个节点都有自己的 SQL 引擎、存储引擎和事务引擎。<br>代表产品：OceanBase。<br>优点：高可扩展性（水平扩展）、高可用性、高性能、低成本（可运行在普通PC服务器上）。  </p>
+<p>共享存储型（Shared-Storage）&#x2F; 存算分离架构：<br>概念：底层存储由分布式存储代替，计算层节点共享同一份数据，拥有访问完整数据集的能力 。通常采用“计算-内存-存储分离”模式 。<br>代表产品：阿里云 PolarDB、Amazon Aurora、Oracle RAC 。<br>优点：提升了系统的整体可用性和扩展性 ；Oracle RAC 通过共享缓存和分布式锁提供了写能力的扩展 。<br>缺点：并发事务处理能力受单个节点性能制约（通常区分读写节点和只读节点）。  </p>
+<p>分布式数据库系统的模式结构  </p>
+<p>全局外模式 (GES)：全局用户视图，最高层抽象。<br>全局概念模式 (GCS)：数据库的整体抽象，包含全部数据特性和逻辑结构。<br>分片模式 (Fragmentation Schema)：DDBS特有。描述全局数据的逻辑划分（如将一个关系分为几个子关系&#x2F;片段）。<br>分配模式 (Allocation Schema)：DDBS特有。描述分片后的局部物理分配视图（即片段存放在哪个物理场地）。<br>局部概念模式 (LCS)：全局概念模式的子集，描述局部场地上的逻辑结构。<br>局部内模式 (LIS)：定义局部的物理视图。  </p>
+<p>分布式数据库系统的数据透明性（定义，举例）<br>数据透明性是指用户在操作数据时，无需了解数据在分布式系统中的具体分布细节。<br>分片透明性 (Fragmentation Transparency)：<br>定义：用户不必考虑数据属于哪个分片（子关系）。位于全局概念模式和分片模式之间 。<br>举例：用户查询 SUPPLIER 表时，不需要知道该表被切分成了 S1 和 S2 两个片段，直接写 Select … From SUPPLIER 。<br>分配透明性 (Allocation Transparency)：<br>定义：用户不必考虑数据片段具体存储在哪个物理场地。位于分片模式和分配模式之间 。<br>举例：用户查询 SUPPLIER1 分片时，不需要知道它存储在“站点1”，系统会自动定位 。<br>局部映射透明性 (Local Mapping Transparency)：<br>定义：用户不必考虑数据的局部存储形式。位于分配模式与局部概念模式之间 。<br>举例：用户需要指定站点（如 SUPPLIER1 AT SITE1），但不需要了解该站点内部的存储细节 。  </p>
+<p>多数据库集成的方法，区别与联系  </p>
+<p>概念：在已存在的局部数据库系统（LDBs）之上，为用户提供一个统一的存取环境。它是自下而上 (Bottom-up) 的集成过程 。<br>与分布式数据库系统 (DDBS) 的区别 ：<br>设计方式：DDBS 是自上而下 (Top-down) 设计；MDBS 是自下而上集成。<br>模式定义：DDBS 的全局模式是预先定义的；MDBS 的模式是集成出来的。<br>同构性：DDBS 通常同构；MDBS 常用于异构数据库集成（通过中间件） 。<br>用户：MDBS 一定存在局部用户直接访问局部数据库的情况。  </p>
+<h3 id="第三章："><a href="#第三章：" class="headerlink" title="第三章："></a>第三章：</h3><p>分布式数据库设计的分片原则、定义、表示方法<br>证明分片原则的正确性<br>分布式数据库的查询优化策略及片段查询优化方法<br>分布式查询的存取优化方法、特征参数的计算（选择运算、投影运算、自然连接运算、半连接运算）  </p>
+<h3 id="第四章："><a href="#第四章：" class="headerlink" title="第四章："></a>第四章：</h3><p>HBase解决了HDFS的哪些问题?具有哪些特点?  </p>
+<p>如果仅用HDFS进行数据管理，存在一些问题:<br>(1)HDFS不支持对数据的随机改写<br>(2)HDFS没有数据表的概念<br>(3)HDFS无法针对行数统计、过滤扫描等常见数据查询功能实现快捷操作，一般需要通过Mapreduce实现。<br><br/><br>HBase底层采用HDFS存储，但是文件结构和元数据等自身维护。具体来说具有以下特点:<br>(1)采用面向列加键值对的存储模式<br>(2)可实现便捷的向扩展<br>(3)可以实现自动的数据分片<br>(4)实现较为严格的读写一致性和自动故障转移<br>HDFS的优势:(大文件存储、多副本、自动分块)    </p>
+<p>HBase数据库中region的含义及其特性。同一个表不同行的数据可以存放在不同的服务器，同一个表相同行的数据必须存放在相同的服务器。这句话如何理解?<br>Region是一段数据的集合，表的一部分数据。HBase是一个会自动分片的数据库。一个Region就相当于关系数据库中分区表的一个分区，或者一个分片。  </p>
+<p>特性：<br>Region不能跨服务器，一个RegionServer上有一个或多个Region<br>当数据量增大时，Region会发生分裂<br>出于负载均衡的需要，Region会发生迁移<br>Region所有的数据存取操作都是调用HDFS的客户端接口实现的</p>
+<p>HBase增删改查的真正操作内容是什么?<br>实际上是对HDFS文件的增加  </p>
+<p>HBase的读写流程  </p>
+<p><img src="https://jsd.cdn.zzko.cn/gh/zongzuoscc/blog-images@main/img/20251229160904.png" alt="20251229160904">  </p>
+<p><img src="https://jsd.cdn.zzko.cn/gh/zongzuoscc/blog-images@main/img/20251229160951.png" alt="20251229160951"></p>
+<p>HBase数据库设计rowkey和列族的原则和方法<br>RowKey设计原则:<br>长度原则：rowkey的长度应该尽可能短，因为rowkey会被存储在HBase的内存中，过长的rowkey会占用更多的内存空间。一般不超过16字节<br>散列原则：rowkey的哈希值应该是随机分布的，这样可以避免数据倾斜问题。不要将时间放在二进制码前面<br>唯一原则：rowkey必须是唯一的，不能重复。  </p>
+<p>加盐salting：<br>为了避免rowkey的哈希值分布不均匀，导致数据倾斜问题，HBase引入了加盐salting的机制。<br>具体来说，就是在rowkey中添加一个随机数作为前缀，这样可以确保rowkey的哈希值是随机分布的。  </p>
+<p>预分区：<br>为了避免数据倾斜问题，HBase引入了预分区的机制。<br>具体来说，就是在创建表时，就指定好分区的数量，这样可以确保数据在不同的Region之间是均匀分布的。  </p>
+<p>散列：<br>为了避免rowkey的哈希值分布不均匀，导致数据倾斜问题，HBase引入了散列的机制。<br>具体来说，就是在rowkey中添加一个随机数作为后缀，这样可以确保rowkey的哈希值是随机分布的。  </p>
+<p>反转rowkey：<br>为了避免rowkey的哈希值分布不均匀，导致数据倾斜问题，HBase引入了反转rowkey的机制。<br>具体来说，就是在rowkey中添加一个随机数作为后缀，这样可以确保rowkey的哈希值是随机分布的。  </p>
 <h3 id="第五章："><a href="#第五章：" class="headerlink" title="第五章："></a>第五章：</h3><p>(1)跳跃表<br>内存结构<br>解决的问题类型(快速写入、更新代价低、支持区间查询)<br>查找和插入的流程(实现原理)  </p>
 <p>(2)LSMI树<br>内存+外存结构<br>什么是compaction?分为哪两种类型?各自优缺点?<br>为什么说LSM树是一种写入友好的数据结构?  </p>
-<p>(3)布隆过滤器<br>解决的问题类型<br>构造方法和查询过程(实现原理)<br>不同索引结构的适用场景  </p>
+<p>(3)布隆过滤器<br>解决的问题类型<br>构造方法和查询过程(实现原理)<br>不同索引结构的适用场景<br><br/><br><br/></p>
+<table>
+<thead>
+<tr>
+<th>索引结构</th>
+<th>核心特点</th>
+<th>适用场景</th>
+<th>典型应用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>哈希索引 (Hash)</td>
+<td>$O(1)$ 极速查找，不支持范围查询</td>
+<td>只有等值查询 (Key&#x3D;Value)</td>
+<td>Redis, HashMap</td>
+</tr>
+<tr>
+<td>B+ 树</td>
+<td>读写平衡，层高固定，适合读多写少</td>
+<td>传统关系型数据库，强一致性，稳定读</td>
+<td>MySQL, Oracle</td>
+</tr>
+<tr>
+<td>LSM 树</td>
+<td>写性能极强，读性能稍弱（需合并）</td>
+<td>海量数据写入，日志存储，历史数据归档</td>
+<td>HBase, Cassandra, RocksDB</td>
+</tr>
+<tr>
+<td>跳跃表</td>
+<td>实现简单，支持并发和区间查询</td>
+<td>内存中的有序数据维护</td>
+<td>HBase MemStore, Redis ZSet</td>
+</tr>
+</tbody></table>
+<br/>
+<br/>
+
 <h3 id="第六章："><a href="#第六章：" class="headerlink" title="第六章："></a>第六章：</h3><p>(1)嵌套事务的概念<br>(2)分布式数据库的一致性级别的内容，并可举例说明<br>(3)分布式数据库的CAP理论和BASE理论<br>(4)分布式事务提交协议(两阶段提交协议执行流程，存在的问题，解决的方法)<br>(5)HBase的一致性ACID特性的实现方法<br>(6)三阶段提交协议与两阶段提交协议的区别  </p>
 <h3 id="第七章："><a href="#第七章：" class="headerlink" title="第七章："></a>第七章：</h3><p>并发控制的基本概念(解决的问题、可串行化调度)<br>分布式并发控制解决的问题<br>分布式事务可串行化判定<br>三种分布式锁的应用场景及具体解决方案<br><br/><br><br/><br><br/></p>
 <blockquote>
