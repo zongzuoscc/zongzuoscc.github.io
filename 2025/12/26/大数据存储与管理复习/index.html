@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>大数据存储与管理 | 未竟</title><meta name="author" content="宗佐"><meta name="copyright" content="宗佐"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="大数据存储与管理理论课题型分布一、论述题（我不知道能考什么）   二、分布式数据库设计及查询优化（如何分片，查询优化树） 三、分布式存取优化（半连接，传输代价） 四、Hbase或索引结构设计 五、分布式事务管理其中第二和第三部分占50%的分值，是复习重点，可以把期中测试题反复理解  知识点分布第一章：大数据的由来（为什么会产生大数据存储系统？）大数据存储系统的产生主要是为了突破传统关系型数据库（R">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>大数据存储与管理 | 未竟</title><meta name="author" content="宗佐"><meta name="copyright" content="宗佐"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="大数据存储与管理理论课题型分布一、论述题（我不知道能考什么）   二、分布式数据库设计及查询优化（如何分片，查询优化树） 三、分布式存取优化（半连接，传输代价）  四、Hbase或索引结构设计 五、分布式事务管理其中第二和第三部分占50%的分值，是复习重点，可以把期中测试题反复理解  知识点分布第一章：大数据的由来（为什么会产生大数据存储系统？）大数据存储系统的产生主要是为了突破传统关系型数据库（">
 <meta property="og:type" content="article">
 <meta property="og:title" content="大数据存储与管理">
 <meta property="og:url" content="https://zongzuoscc.github.io/2025/12/26/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E4%B8%8E%E7%AE%A1%E7%90%86%E5%A4%8D%E4%B9%A0/index.html">
 <meta property="og:site_name" content="未竟">
-<meta property="og:description" content="大数据存储与管理理论课题型分布一、论述题（我不知道能考什么）   二、分布式数据库设计及查询优化（如何分片，查询优化树） 三、分布式存取优化（半连接，传输代价） 四、Hbase或索引结构设计 五、分布式事务管理其中第二和第三部分占50%的分值，是复习重点，可以把期中测试题反复理解  知识点分布第一章：大数据的由来（为什么会产生大数据存储系统？）大数据存储系统的产生主要是为了突破传统关系型数据库（R">
+<meta property="og:description" content="大数据存储与管理理论课题型分布一、论述题（我不知道能考什么）   二、分布式数据库设计及查询优化（如何分片，查询优化树） 三、分布式存取优化（半连接，传输代价）  四、Hbase或索引结构设计 五、分布式事务管理其中第二和第三部分占50%的分值，是复习重点，可以把期中测试题反复理解  知识点分布第一章：大数据的由来（为什么会产生大数据存储系统？）大数据存储系统的产生主要是为了突破传统关系型数据库（">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://zongzuoscc.github.io/img/%E5%B0%8F%E7%86%8A%E7%BB%B4%E5%B0%BC.jpg">
 <meta property="article:published_time" content="2025-12-25T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-12-30T01:57:24.948Z">
+<meta property="article:modified_time" content="2025-12-30T02:43:30.385Z">
 <meta property="article:author" content="宗佐">
 <meta property="article:tag" content="Java, Spring Boot, MySQL, CUMT">
 <meta name="twitter:card" content="summary">
@@ -18,7 +18,7 @@
   "url": "https://zongzuoscc.github.io/2025/12/26/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E4%B8%8E%E7%AE%A1%E7%90%86%E5%A4%8D%E4%B9%A0/",
   "image": "https://zongzuoscc.github.io/img/%E5%B0%8F%E7%86%8A%E7%BB%B4%E5%B0%BC.jpg",
   "datePublished": "2025-12-25T16:00:00.000Z",
-  "dateModified": "2025-12-30T01:57:24.948Z",
+  "dateModified": "2025-12-30T02:43:30.385Z",
   "author": [
     {
       "@type": "Person",
@@ -159,9 +159,10 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/img/bg.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/%E5%B0%8F%E7%86%8A%E7%BB%B4%E5%B0%BC.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">未竟</span></a><a class="nav-page-title" href="/"><span class="site-name">大数据存储与管理</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">大数据存储与管理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-12-25T16:00:00.000Z" title="发表于 2025-12-26 00:00:00">2025-12-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-12-30T01:57:24.948Z" title="更新于 2025-12-30 09:57:24">2025-12-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%A0%A1%E5%86%85%E8%AF%BE%E7%A8%8B/">校内课程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="大数据存储与管理理论课"><a href="#大数据存储与管理理论课" class="headerlink" title="大数据存储与管理理论课"></a>大数据存储与管理理论课</h1><h2 id="题型分布"><a href="#题型分布" class="headerlink" title="题型分布"></a>题型分布</h2><h3 id="一、论述题"><a href="#一、论述题" class="headerlink" title="一、论述题"></a>一、论述题</h3><p>（我不知道能考什么）  </p>
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/img/bg.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/%E5%B0%8F%E7%86%8A%E7%BB%B4%E5%B0%BC.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">未竟</span></a><a class="nav-page-title" href="/"><span class="site-name">大数据存储与管理</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">大数据存储与管理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-12-25T16:00:00.000Z" title="发表于 2025-12-26 00:00:00">2025-12-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-12-30T02:43:30.385Z" title="更新于 2025-12-30 10:43:30">2025-12-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%A0%A1%E5%86%85%E8%AF%BE%E7%A8%8B/">校内课程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="大数据存储与管理理论课"><a href="#大数据存储与管理理论课" class="headerlink" title="大数据存储与管理理论课"></a>大数据存储与管理理论课</h1><h2 id="题型分布"><a href="#题型分布" class="headerlink" title="题型分布"></a>题型分布</h2><h3 id="一、论述题"><a href="#一、论述题" class="headerlink" title="一、论述题"></a>一、论述题</h3><p>（我不知道能考什么）  </p>
 <h3 id="二、分布式数据库设计及查询优化（如何分片，查询优化树）"><a href="#二、分布式数据库设计及查询优化（如何分片，查询优化树）" class="headerlink" title="二、分布式数据库设计及查询优化（如何分片，查询优化树）"></a>二、分布式数据库设计及查询优化（如何分片，查询优化树）</h3><p><img src="https://jsd.cdn.zzko.cn/gh/zongzuoscc/blog-images@main/img/5073168715bfd48059eb854e003b63e3.jpg" alt="5073168715bfd48059eb854e003b63e3"></p>
 <h3 id="三、分布式存取优化（半连接，传输代价）"><a href="#三、分布式存取优化（半连接，传输代价）" class="headerlink" title="三、分布式存取优化（半连接，传输代价）"></a>三、分布式存取优化（半连接，传输代价）</h3><p><img src="https://jsd.cdn.zzko.cn/gh/zongzuoscc/blog-images@main/img/f5da3c2fb030f7d227cf7c360b24559c.jpg" alt="f5da3c2fb030f7d227cf7c360b24559c"></p>
+<p><img src="https://jsd.cdn.zzko.cn/gh/zongzuoscc/blog-images@main/img/aa6d259cfb1bb3e93c5f030a4cf15463.jpg" alt="aa6d259cfb1bb3e93c5f030a4cf15463"></p>
 <h3 id="四、Hbase或索引结构设计"><a href="#四、Hbase或索引结构设计" class="headerlink" title="四、Hbase或索引结构设计"></a>四、Hbase或索引结构设计</h3><p><img src="https://jsd.cdn.zzko.cn/gh/zongzuoscc/blog-images@main/img/f48951b6a8514659fe59ce1b889d757d.jpg" alt="f48951b6a8514659fe59ce1b889d757d"></p>
 <h3 id="五、分布式事务管理"><a href="#五、分布式事务管理" class="headerlink" title="五、分布式事务管理"></a>五、分布式事务管理</h3><p>其中第二和第三部分占50%的分值，是复习重点，可以把期中测试题反复理解</p>
 <hr>
@@ -317,7 +318,65 @@
 <p>多了“预提交”阶段 (PreCommit)：<br>2PC：Prepare $\rightarrow$ Commit<br>3PC：CanCommit $\rightarrow$ PreCommit $\rightarrow$ DoCommit  </p>
 <p>引入了超时机制：在 2PC 中，只有协调者有超时机制。<br>在 3PC 中，参与者也有超时机制。如果参与者在 PreCommit 阶段之后收不到协调者的死活消息，它会默认执行提交（这就避免了资源长期被锁死）。<br>非阻塞：由于多了一个阶段做缓冲，且有超时提交策略，3PC 在协调者故障时，参与者能达成一致避免长期阻塞。</p>
 <p><strong>关于故障恢复</strong></p>
-<h3 id="第七章："><a href="#第七章：" class="headerlink" title="第七章："></a>第七章：</h3><h4 id="并发控制的基本概念-解决的问题、可串行化调度"><a href="#并发控制的基本概念-解决的问题、可串行化调度" class="headerlink" title="并发控制的基本概念(解决的问题、可串行化调度)"></a>并发控制的基本概念(解决的问题、可串行化调度)</h4><h4 id="分布式并发控制解决的问题"><a href="#分布式并发控制解决的问题" class="headerlink" title="分布式并发控制解决的问题"></a>分布式并发控制解决的问题</h4><h4 id="分布式事务可串行化判定"><a href="#分布式事务可串行化判定" class="headerlink" title="分布式事务可串行化判定"></a>分布式事务可串行化判定</h4><h4 id="三种分布式锁的应用场景及具体解决方案"><a href="#三种分布式锁的应用场景及具体解决方案" class="headerlink" title="三种分布式锁的应用场景及具体解决方案"></a>三种分布式锁的应用场景及具体解决方案</h4><br/>
+<h3 id="第七章："><a href="#第七章：" class="headerlink" title="第七章："></a>第七章：</h3><h4 id="并发控制的基本概念-解决的问题、可串行化调度"><a href="#并发控制的基本概念-解决的问题、可串行化调度" class="headerlink" title="并发控制的基本概念(解决的问题、可串行化调度)"></a>并发控制的基本概念(解决的问题、可串行化调度)</h4><p>集中式环境下，并发就是多个事务的同时执行，并发能够提高系统的效率，但也可能会带来三种错误。<br>并发控制的主要目的是保证事务的隔离性，最终保证数据的一致性。（解决的问题）  </p>
+<p>可串行化调度：如果一个并发调度 $H$ 的执行结果与某一个串行调度（即事务一个接一个执行，没有交叉）的执行结果完全相同（等价），则称该并发调度是可串行化的。  </p>
+<h4 id="分布式并发控制解决的问题"><a href="#分布式并发控制解决的问题" class="headerlink" title="分布式并发控制解决的问题"></a>分布式并发控制解决的问题</h4><p>并发控制问题：  </p>
+<ol>
+<li>丢失修改错误</li>
+<li>不可重复读错误</li>
+<li>读脏数据错误</li>
+</ol>
+<p>并发控制就是利用正确的方式调度事务中所涉及的并发操作序列，避免造成数据的不一致性；防止一个事务的执行受到其它事务的干扰，保证事务并发执行的可串行性。  </p>
+<p>当分布事务并发执行时，并发控制既要实现分布事务的可串行性，又要保持事务具有良好的并发度，以保证系统具有良好的性能。  </p>
+<h4 id="分布式事务可串行化判定"><a href="#分布式事务可串行化判定" class="headerlink" title="分布式事务可串行化判定"></a>分布式事务可串行化判定</h4><p>一个分布式事务执行序列 $E$ 是可串行化的，必须满足以下两个条件：局部可串行化：每个场地 $S_i$ 上的局部调度 $H(S_i)$ 必须是可串行化的。<br>全局顺序一致性：存在一个全局的总序，使得如果 $T_i &lt; T_j$（即 $T_i$ 先于$T_j$），那么在所有涉及这两个事务冲突操作的局部调度中，都必须保持 $T_i &lt; T_j$ 的顺序。  </p>
+<h4 id="三种分布式锁的应用场景及具体解决方案"><a href="#三种分布式锁的应用场景及具体解决方案" class="headerlink" title="三种分布式锁的应用场景及具体解决方案"></a>三种分布式锁的应用场景及具体解决方案</h4><p>(1) 基于数据库实现的分布式锁 (MySQL)  </p>
+<ul>
+<li><p>实现原理：利用数据库的唯一索引机制。  </p>
+<ul>
+<li>加锁：准备一张表，将共享资源的 ID 作为唯一主键或唯一索引插入表中。插入成功即获得锁，插入失败表示锁已被占用，需等待。</li>
+<li>解锁：删除对应的记录。</li>
+</ul>
+</li>
+<li><p>存在问题及解决：  </p>
+<ul>
+<li>死锁问题：若断网导致锁未释放，通过在表中增加“开始时间”和“结束时间”字段作为有效期来解决。  </li>
+<li>超时问题：若任务未完成锁就过期，引入 watchdog 机制给锁续期。</li>
+</ul>
+</li>
+</ul>
+<p>(2) Redis 分布式锁</p>
+<ul>
+<li><p>实现原理：基于 Redis 的原子命令。</p>
+<ul>
+<li>加锁：使用 setnx key value 命令（Set if Not Exists）。若 key 不存在则设置成功（获锁），存在则不做操作 。</li>
+<li>解锁：使用 del key 命令 。</li>
+</ul>
+</li>
+<li><p>存在问题及解决：</p>
+<ul>
+<li>死锁风险：服务挂掉导致锁未释放。解决方案是设置 key 的过期时间 (expire)，让锁自动释放 。</li>
+<li>误删锁：为了防止 A 线程删除了 B 线程的锁，value 值应设为 UUID，解锁时先判断是否为自己的 UUID 再删除 。</li>
+</ul>
+</li>
+</ul>
+<p>(3) ZooKeeper 分布式锁</p>
+<ul>
+<li><p>实现原理：基于临时顺序节点 (Temporary Sequential Node) 和监听机制。</p>
+<ul>
+<li>加锁流程：在 &#x2F;mylock 目录下创建临时顺序节点 。判断自己是否为序号最小的节点。如果是，则获得锁 。如果不是，则监听 (Watch) 比自己序号小的那个兄弟节点 。</li>
+<li>解锁流程：任务执行完删除节点，或者会话断开自动删除（临时节点特性）。后一个节点监听到前一个节点删除事件后，获得锁 。</li>
+</ul>
+</li>
+<li><p>特点：可靠性最高，但性能略低于缓存方式 。</p>
+</li>
+</ul>
+<p>三种锁的比较总结：  </p>
+<ul>
+<li>理解难易：数据库 (易) &gt; 缓存 &gt; Zookeeper (难) </li>
+<li>性能：缓存 (高) &gt; Zookeeper &gt; 数据库 (低) </li>
+<li>可靠性：Zookeeper (高) &gt; 缓存 &gt; 数据库 (低)</li>
+</ul>
+<br/>
 <br/>
 <br/>
 
